@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: omnitab
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node --max-old-space-size=384 src/index.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production

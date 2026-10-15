@@ -1,0 +1,38 @@
+{
+	"name": "omnitab",
+	"version": "2.1.0",
+	"description": "Omnitab - high-performance web proxy portal (Wisp) optimized for Render Free.",
+	"type": "module",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"scripts": {
+		"start": "node --max-old-space-size=384 src/index.js",
+		"test": "node test/run-all.mjs",
+		"format": "prettier --write .",
+		"lint": "eslint ./src/",
+		"lint:fix": "eslint ./src/ --fix",
+		"postinstall": "cp public/libcurl/index.mjs node_modules/@mercuryworkshop/libcurl-transport/dist/index.mjs 2>/dev/null || true"
+	},
+	"keywords": [
+		"proxy",
+		"wisp",
+		"omnitab"
+	],
+	"author": "Omnitab",
+	"license": "GNU AFFERO",
+	"dependencies": {
+		"@fastify/compress": "^9.2.2",
+		"@fastify/static": "^9.0.0",
+		"@mercuryworkshop/bare-mux": "^2.1.9",
+		"@mercuryworkshop/libcurl-transport": "^1.5.2",
+		"@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/v1.1.0/mercuryworkshop-scramjet-1.1.0.tgz",
+		"@mercuryworkshop/wisp-js": "^0.4.1",
+		"fastify": "^5.7.4",
+		"ws": "^8.18.3"
+	},
+	"devDependencies": {
+		"eslint": "^9.13.0",
+		"prettier": "^3.3.3"
+	}
+}

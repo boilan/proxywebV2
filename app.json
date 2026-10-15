@@ -1,0 +1,6 @@
+{
+	"name": "Omnitab",
+	"description": "Omnitab: portal de proxy web autoalojado (Wisp)",
+	"repository": "https://github.com/boilan/proxywebV2",
+	"keywords": ["omnitab", "proxy", "wisp", "web"]
+}
